@@ -1,10 +1,17 @@
 public class lists
 {
+	/**
+	*Main method
+	*@param String[] args
+	*/
 	public static void main(String[] args)
 	{
 		print2D(createArrArr(34));
-		
 	}
+	/**
+	*Method that prints out a 2D array
+	*@param int[][] a that represents the 2D array to be printed out in fancy, organized matter
+	*/
 	public static void print2D(int[][] a)
 	{
 		int longestLength = a[a.length-1][a.length-1];
@@ -46,6 +53,11 @@ public class lists
 			System.out.println(line);
 		}
 	}
+	/**
+	*Counts how many place values are in the number
+	*@param int n a number 
+	*@return int counter that represents how many place values the number has
+	*/
 	public static int lengthFinder(int n)
 	{
 		int counter = 1;
@@ -57,7 +69,10 @@ public class lists
 		return counter;
 	}
 	//If it has the same name, its overloaded.
-	//TODO - Make it print everything nice
+	/**
+	*Prints out a 2D array. 
+	*@param String[][] a array to be printed
+	*/
 	public static void print2D(String[][] a)
 	{
 		for (int row = 0; row < a.length; row++)
@@ -70,11 +85,20 @@ public class lists
 			
 		}
 	}
+	/**
+	*Creates a 2D int array. 
+	*@return int[][] pirate a 2D array 
+	*/
 	public static int[][] createArrArr()
 	{
 		int[][] pirate = createArrArr(4);
 		return pirate;
 	}
+	/**
+	*Creates a 2D int array. 
+	*@param int n number of rows and columns in the array
+	*@return int[][] pirate a 2D array
+	*/
 	public static int[][] createArrArr(int n)
 	{
 		int[][] pirate = new int[n][n];
