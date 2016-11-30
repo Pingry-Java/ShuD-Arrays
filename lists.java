@@ -2,17 +2,7 @@ public class lists
 {
 	public static void main(String[] args)
 	{
-		int[] ns = new int[6];
-		//int[][] grid = new int[3][4]; // makes a 2d grid thats 3 by 4
-		int[][] grid = {{1,2,3},{4,5,6},{7,8,9}};
-		print2D(grid);
-		int[][] spreadsheet = new int[5][7];
-		print2D(spreadsheet);
-		String[][] myWords = new String[4][3];
-		System.out.println(myWords); //gives memory location
-		print2D(myWords);
-		print2D(createArrArr());
-		print2D(createArrArr(6));
+		print2D(createArrArr(8));
 		
 	}
 	public static void print2D(int[][] a)
@@ -26,7 +16,7 @@ public class lists
 			longestLength = longestLength/10;
 			counter++;
 		}
-		for (int i = 0; i <= a.length*(counter-1) + a.length+1;i++)
+		for (int i = 0; i <= a.length*(counter-1) + a.length;i++)
 			line = line + "-";
 		System.out.println(line);
 		for (int row = 0; row < a.length; row++)
