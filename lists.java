@@ -13,22 +13,45 @@ public class lists
 		print2D(myWords);
 		print2D(createArrArr());
 		print2D(createArrArr(6));
-		punnett("IIYY","iiyy", 2);
 		
 	}
 	public static void print2D(int[][] a)
 	{
-		int intLength = 0;
-		
+		int longestLength = a.length*a[0].length;
+		int numberOfInts = 0;
+		int counter = 1;
+		String line = "";
+		while (longestLength > 1)
+		{
+			longestLength = longestLength/10;
+			counter++;
+		}
+		for (int i = 0; i <= a.length*(counter-1) + a.length+1;i++)
+			line = line + "-";
+		System.out.println(line);
 		for (int row = 0; row < a.length; row++)
 		{
+			System.out.print("|");
 			for (int column = 0; column < a[row].length; column++)
 			{
-				System.out.print(a[row][column]+" ");
+				if (lengthFinder(a[row][column])<counter)
+					System.out.print(a[row][column]+" |");
+				else
+					System.out.print(a[row][column]+"|");
 			}
-			System.out.println();
-			
+			System.out.println("");
+			System.out.println(line);
 		}
+	}
+	public static int lengthFinder(int n)
+	{
+		int counter = 1;
+		while (n >= 1)
+		{
+			n = n/10;
+			counter++;
+		}
+		return counter;
 	}
 	//If it has the same name, its overloaded.
 	//TODO - Make it print everything nice
@@ -62,26 +85,5 @@ public class lists
 			}	
 		}
 		return pirate;
-	}
-	public static void punnett(String purebredM, String purebredW, int generation)
-	{
-		char m1 = purebredM.charAt(0);
-		char m2 = purebredM.charAt(1);
-		char m3 = purebredM.charAt(2);
-		char m4 = purebredM.charAt(3);
-		char w1 = purebredW.charAt(0);
-		char w2 = purebredW.charAt(1);
-		char w3 = purebredW.charAt(2);
-		char w4 = purebredW.charAt(3);
-		String genp2 = ""+ m1+w1+m3+w3;
-		System.out.println(genp2);
-		for (int i = 0; i < generation; i++)
-		{
-			
-		}
-		for (int i = 0; i < 4; i++)
-		{
-			
-		}
 	}
 }
