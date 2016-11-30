@@ -8,18 +8,15 @@ public class lists
 	public static void print2D(int[][] a)
 	{
 		int longestLength = a[a.length-1][a.length-1];
-		System.out.println(a[a.length-1][a.length-1]);
 		int numberOfInts = 0;
 		int counter = 1;
 		int difference = 0;
 		String line = "";
-		System.out.println(lengthFinder(a[0][0]));
 		while (longestLength >= 10)
 		{
 			longestLength = longestLength/10;
 			counter++;
 		}
-		System.out.println(counter);
 		for (int i = 0; i <= a.length*(counter) + a.length;i++)
 			line = line + "-";
 		System.out.println(line);
